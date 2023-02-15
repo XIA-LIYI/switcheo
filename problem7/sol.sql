@@ -3,7 +3,7 @@ use test;
 # This is changes in users' balances
 # Need the latest balance
 create table balances (
-	id int auto_increment primary key,
+    id int auto_increment primary key,
     address VARCHAR(255),
     denom VARCHAR(255),
     amount bigint,
@@ -11,7 +11,7 @@ create table balances (
 );
 
 create table trades (
-	id int auto_increment primary key,
+    id int auto_increment primary key,
     address VARCHAR(255),
     block_height int
 );
