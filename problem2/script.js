@@ -20,7 +20,7 @@ $(() => {
             }
             return true;
         });
-    }
+    };
     
     const loadPanel = $('#loadPanel').dxLoadPanel({
         position: { at: '#form-container'},
@@ -90,8 +90,6 @@ $(() => {
                 }
             }
         }]
-
-
     }).dxPopup('instance');
 
     const onFormSubmit = function (e) {

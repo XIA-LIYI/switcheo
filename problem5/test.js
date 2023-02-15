@@ -55,7 +55,7 @@ const ABI = [
 ];
 
 const ADDRESS = "0xDB27e5Ce3c869580072963FF521d5462E8e2121b"; 
-const TOKENS = [    
+const TOKENS = [
 	"0x4963056F3D4C23cd6c58F97c4a6c09D4FaCC706F"
 ];
 
@@ -63,17 +63,17 @@ const provider = new ethers.providers.JsonRpcProvider("http://localhost:8545");
 const signer = provider.getSigner(); 
 
 const test = async () => {
-    
+
 	const contract = new ethers.Contract(ADDR, ABI, signer);
 
     try {
-        await contract.getBalances(ADDRESS, TOKENS);
+		await contract.getBalances(ADDRESS, TOKENS);
     } catch(error) {
-        console.log("error: " + error);
+		console.log("error: " + error);
     }
-    
-    const balances = contract.showBalances();
 	
+	const balances = contract.showBalances();
+
 	return balances;
 };
 
