@@ -66,11 +66,11 @@ const test = async () => {
 
 	const contract = new ethers.Contract(ADDR, ABI, signer);
 
-    try {
+	try {
 		await contract.getBalances(ADDRESS, TOKENS);
-    } catch(error) {
+	} catch(error) {
 		console.log("error: " + error);
-    }
+	}
 	
 	const balances = contract.showBalances();
 
@@ -78,7 +78,7 @@ const test = async () => {
 };
 
 test().then(
-    data => {
-        console.log(data);
-    }
+	data => {
+		console.log(data);
+	}
 );
